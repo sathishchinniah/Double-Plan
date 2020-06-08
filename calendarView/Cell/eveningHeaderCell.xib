@@ -26,8 +26,15 @@
                                     <constraint firstAttribute="height" constant="50" id="rGL-g5-sjb"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nicolas is the host:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cb1-Kf-SlB">
-                                <rect key="frame" x="73" y="15" width="136" height="50"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bot 2" translatesAutoresizingMaskIntoConstraints="NO" id="Pe0-X9-hUb">
+                                <rect key="frame" x="45" y="52" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="MaO-Fy-mk5"/>
+                                    <constraint firstAttribute="height" constant="20" id="Pm6-pH-7Oc"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nicolas is the host :" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cb1-Kf-SlB">
+                                <rect key="frame" x="73" y="15" width="139.5" height="50"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -36,6 +43,8 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="cb1-Kf-SlB" secondAttribute="bottom" constant="15" id="2Z2-h1-hyD"/>
+                            <constraint firstItem="Pe0-X9-hUb" firstAttribute="leading" secondItem="3ec-6h-14d" secondAttribute="trailing" constant="-20" id="BG1-7a-xgx"/>
+                            <constraint firstItem="Pe0-X9-hUb" firstAttribute="top" secondItem="3ec-6h-14d" secondAttribute="bottom" constant="-13" id="Efu-39-VSJ"/>
                             <constraint firstItem="cb1-Kf-SlB" firstAttribute="top" secondItem="TMm-tc-fE1" secondAttribute="top" constant="15" id="SkF-UN-lDf"/>
                             <constraint firstAttribute="height" constant="80" id="fnk-lX-meN"/>
                             <constraint firstItem="cb1-Kf-SlB" firstAttribute="leading" secondItem="3ec-6h-14d" secondAttribute="trailing" constant="8" id="j55-e9-8jV"/>
@@ -55,12 +64,13 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="bgView" destination="TMm-tc-fE1" id="yM9-9b-gBd"/>
-                <outlet property="hostImage" destination="3ec-6h-14d" id="GZI-jU-WOT"/>
+                <outlet property="hostImage" destination="3ec-6h-14d" id="Wkb-wl-yUC"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="127.90178571428571"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Bot 2" width="19" height="19"/>
         <image name="datingprofile2-900x600" width="900" height="600"/>
     </resources>
 </document>

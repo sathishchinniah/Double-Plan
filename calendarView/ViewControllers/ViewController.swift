@@ -8,6 +8,7 @@
 
 import UIKit
 import FSCalendar
+
 class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource, UITableViewDelegate, UITableViewDataSource, FSCalendarDelegateAppearance{
     
     @IBOutlet weak var calendar: FSCalendar!
@@ -28,12 +29,13 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
     }()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Double Plan"
+        self.title = "My Plan"
         NotificationCenter.default.addObserver(self, selector: #selector(self.methodOfReceivedNotification(notification:)), name: Notification.Name("refreshTable"), object: nil)
         
         self.cityButton.addShadow(radius: 15)
         tableView.register(UINib(nibName: "headerCell", bundle: nil), forCellReuseIdentifier: "headerCell")
         tableView.register(UINib(nibName: "EveningCell", bundle: nil), forCellReuseIdentifier: "EveningCell")
+        
         
         calendar.dataSource = self
         calendar.delegate = self
@@ -138,7 +140,7 @@ class ViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource
                 let defaults = UserDefaults.standard
                 let count = defaults.integer(forKey: "count")
                 
-                return  CGFloat(count * 250 + 240)
+                return  CGFloat(count * 250 + 350)
             }
             else
             {
